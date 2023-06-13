@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
   inputView: {
     borderBottomWidth: 2,
-    borderColor: 'grey',
+    borderColor: 'black',
     paddingRight: 5,
     paddingLeft: 5,
     paddingTop: 20,
