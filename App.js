@@ -24,16 +24,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   header: {
-    fontSize: '40px',
+    fontSize: 42,
     fontWeight: 'bold',
     color: 'red'
   },
   inputView: {
-    borderRadius: 20,
-    borderBottomColor: 'gray',
+    borderBottomWidth: 2,
+    borderColor: 'grey',
+    paddingRight: 5,
+    paddingLeft: 5,
+    paddingTop: 20,
+
   },
   inputField: {
-    fontSize: '32px',
+    fontSize: 24,
   },
 
 });
