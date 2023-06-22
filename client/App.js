@@ -8,10 +8,23 @@ import LandingPage from './screens/landingPage'
 import Home from './screens/homePage';
 import RegisterPage from './screens/registerPage'
 import Profile from './screens/profilePage';
+//backend import
+import React, { useEffect, useState } from 'react';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+const [backendData, setBackendData] = useState([{}])
+
+useEffect(() => {
+  fetch("/api").then(
+    response => response.json()
+  ).then(
+    data => {
+      setBackendData(data)
+    }
+  )
+}, [])
   return (
     <NavigationContainer>
       <Stack.Navigator>
