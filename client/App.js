@@ -7,24 +7,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LandingPage from './screens/landingPage'
 import Home from './screens/homePage';
 import RegisterPage from './screens/registerPage'
+import UsersPage from './screens/usersPage'
 import Profile from './screens/profilePage';
 //backend import
-import React, { useEffect, useState } from 'react';
+
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-const [backendData, setBackendData] = useState([{}])
 
-useEffect(() => {
-  fetch("/api").then(
-    response => response.json()
-  ).then(
-    data => {
-      setBackendData(data)
-    }
-  )
-}, [])
   return (
     <NavigationContainer>
       <Stack.Navigator>
@@ -38,6 +29,10 @@ useEffect(() => {
         <Stack.Screen 
           name="Register" 
           component={RegisterPage}
+        />
+        <Stack.Screen 
+          name="Users" 
+          component={UsersPage}
         />
         <Stack.Screen 
           name="Home" 

@@ -17,6 +17,9 @@ const LandingPage = () => {
                     <TouchableOpacity style={[styles.loginButton, styles.shadowProp]} onPress={() => navigation.navigate("Home")}>
                         <Text style={styles.loginButtonText}>Login</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity style={[styles.loginButton, styles.shadowProp]} onPress={() => navigation.navigate("Users")}>
+                        <Text>Users</Text>
+                    </TouchableOpacity>
                     <TouchableOpacity style={[styles.registerButton, styles.shadowProp]} onPress={() => navigation.navigate("Register")}>
                         <Text style={styles.registerButtonText}>Register</Text>
                     </TouchableOpacity> 
